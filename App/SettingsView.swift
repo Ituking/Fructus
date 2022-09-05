@@ -1,5 +1,5 @@
 //
-//  SettingsViews.swift
+//  SettingsView.swift
 //  Fructus
 //
 //  Created by 大久保樹 on 2022/09/05.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsViews: View {
+struct SettingsView: View {
     // MARK: - PROPERTIES
     
     @Environment(\.presentationMode) var presentationMode
@@ -37,9 +37,9 @@ struct SettingsViews: View {
 
 // MARK: - PREVIEW
 
-struct SettingsViews_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsViews()
+        SettingsView()
             .preferredColorScheme(.dark)
     }
 }
