@@ -1,0 +1,44 @@
+//
+//  SettingsRowView.swift
+//  Fructus
+//
+//  Created by 大久保樹 on 2022/09/06.
+//
+
+import SwiftUI
+
+struct SettingsRowView: View {
+    // MARK: - PROPERTIES
+    
+    var name: String
+    var content: String? = nil
+    var linkLabel: String? = nil
+    var linkDestination: String? = nil
+    
+    // MARK: - BODY
+    
+    var body: some View {
+        HStack {
+            Text(name).foregroundColor(Color.gray)
+            Spacer()
+            if (content != nil) {
+                Text(content!)
+            } else if (linkLabel != nil && linkDestination != nil) {
+                Link(linkLabel!, destination: URL(string: "https://\(linkDestination!)")!)
+                Image(systemName: "allow.up.right.square").foregroundColor(.pink)
+            } else {
+                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+            }
+        }
+    }
+}
+
+// MARK: - PREVIEW
+
+struct SettingsRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsRowView(name: "Developer", content: "Itsuki Okubo")
+            .previewLayout(.fixed(width: 375, height: 60))
+            .padding()
+    }
+}

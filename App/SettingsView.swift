@@ -41,6 +41,17 @@ struct SettingsView: View {
                     // MARK: - SECTION 2
 
                     // MARK: - SECTION 3
+                    
+                    GroupBox(label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone"))
+                    {
+                        Divider().padding(.vertical, 4)
+                        
+                        HStack {
+                            Text("Developer").foregroundColor(Color.gray)
+                            Spacer()
+                            Text("Itsuki Okubo")
+                        }
+                    }
 
                 } //: VSTACK
                 .navigationBarTitle(Text("Settings"), displayMode: .large)
