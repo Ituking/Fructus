@@ -27,18 +27,22 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Fruits")
-            .navigationBarItems(trailing: Button(action: {
-                isShowingSettings = true
-            }) {
-                Image(systemName: "slider.horizontal.3")
-            } //: BUTTON
-                .sheet(isPresented: $isShowingSettings) {
-                    SettingsView()
-                }
+            .navigationBarItems(
+                trailing:
+                    Button(action: {
+                        isShowingSettings = true
+                    }) {
+                        Image(systemName: "slider.horizontal.3")
+                    } //: BUTTON
+                    .sheet(isPresented: $isShowingSettings) {
+                        SettingsView()
+                    }
             )
         } //: NAVIGATION
     }
 }
+
+// MARK: - PREVIEW
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

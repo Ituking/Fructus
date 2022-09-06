@@ -44,7 +44,7 @@ struct FruitCardView: View {
                 StartButtonView()
             } //: VSTACK
         } //: ZSTACK
-        .onAppear{
+        .onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimating = true
             }
@@ -56,11 +56,11 @@ struct FruitCardView: View {
     }
 }
 
-// MARK: -PREVIEW
+// MARK: - PREVIEW
 
 struct FruitCardView_Previews: PreviewProvider {
     static var previews: some View {
-        FruitCardView(fruit: fruitsData[4])
+        FruitCardView(fruit: fruitsData[1])
             .previewLayout(.fixed(width: 320, height: 640))
     }
 }
